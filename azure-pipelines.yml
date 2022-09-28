@@ -31,12 +31,11 @@ stages:
     
     - task: SnykSecurityScan@1
       inputs:
-        serviceConnectionEndpoint: 'snykconnection'
+        serviceConnectionEndpoint: 'connectionsnyk'
         testType: 'app'
         monitorWhen: 'always'
         failOnIssues: false
-        projectName: 'juiceshop'
-        organization: 'mahesh0054'
+
     - task: Docker@2
       displayName: Build and push an image to container registry
       inputs:
