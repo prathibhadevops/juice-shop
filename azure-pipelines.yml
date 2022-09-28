@@ -31,7 +31,7 @@ stages:
     
     - task: SnykSecurityScan@1
       inputs:
-        serviceConnectionEndpoint: 'connectionsnyk'
+        serviceConnectionEndpoint: 'connectionnamesnyk'
         testType: 'app'
         monitorWhen: 'always'
         failOnIssues: false
